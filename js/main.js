@@ -25,6 +25,7 @@ const listProducts = {
 }
 
 const listProductsHtml = document.getElementById("cards-container");
+const loader = document.querySelector("#loader");
 
 function showProducts() {
     let fragmento = ``;
@@ -77,6 +78,9 @@ function navScroll() {
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
+    setTimeout(() => {
+        loader.classList.toggle("display-none")
+    }, 3000)
     showProducts();
     headerScroll();
     navScroll();

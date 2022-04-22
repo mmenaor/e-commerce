@@ -12,36 +12,40 @@ body {
 
 /* -------------------- LOADER -------------------- */
 /* -------------------- LOADER -------------------- */
-.load {
+#loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(206, 4%, 97%);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: hsl(206, 4%, 97%);;
-    z-index: 10;
-    display: grid;
-    justify-content: center;
+    display: flex;
     align-items: center;
-  }
+    justify-content: center;
+    z-index: 10;
+}
   
-  .load svg {
-    fill: hsl(354, 78%, 60%);
-    width: 100px;
-    animation: scroll 1.5s infinite;
-  }
+#loader img {
+    width: 80px;
+    position: relative;
+    animation: loader-effect 1.5s infinite;
+}
+
+#loader.display-none {
+    display: none;
+}
   
-  @keyframes scroll {
+@keyframes loader-effect {
     0% {
-      transform: translateY(0);
+        top: -10px;
     }
     50% {
-      transform: translateY(10px);
+        top: 20px;
     }
     100% {
-      transform: translateY(0);
+        top: -10px;
     }
-  }
+}
 
 /* -------------------- NAV -------------------- */
 /* -------------------- NAV -------------------- */
@@ -368,7 +372,7 @@ header {
 #section-footer > div {
     display: grid;
     row-gap: 2rem;
-    border-bottom: 1px solid hsl(0, 0%, 94%);;
+    border-bottom: 1px solid hsl(0, 0%, 94%);
     padding-bottom: 3rem;
     max-width: 1024px;
     margin-left: 2rem;
@@ -480,3 +484,164 @@ header {
     min 767
     min 576
 } */
+
+#cart {
+    width: 40vw;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: -40vw;
+    padding: 2rem;
+    z-index: 20;
+    box-shadow: 0 4px 12px hsl(206deg 4% 4% / 20%);
+    /*     transition: .4s; */
+}
+
+#cart-close-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#cart-close {
+    font-size: 3rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#cart > h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 1rem;
+}
+
+#cart-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+#cart-container > img {
+    width: 75px;
+    height: 75px;
+    padding: 0.5rem;
+    border: 1px solid hsl(0, 0%, 94%);
+}
+
+#cart-container-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-left: 2rem;
+}
+
+#cart-container-text > h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+#cart-container-text > h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 35%);
+    letter-spacing: 0.05rem;
+}
+
+#cart-container-text > h4 > span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #e94959;
+    letter-spacing: 0.05rem;
+}
+
+#cart-container-text > span {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #e94959;
+    letter-spacing: 0.05rem;
+}
+
+#cart-container-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+#cart-container-buttons > button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #ffffff;
+    font-size: 2rem;
+    color: hsl(0, 0%, 35%);
+    border: 1px solid hsl(0, 0%, 94%);
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#cart-container-buttons > h4 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 35%);
+    letter-spacing: 0.05rem;
+    margin: 0 1rem;
+}
+
+#cart-container-buttons > img {
+    margin-left: 3rem;
+    width: 1.6rem;
+    cursor: pointer;
+}
+
+#checkout-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#checkout-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 3rem;
+    background: #434343;
+    font-size: 1.5rem;
+    border: none;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: absolute;
+    top: 200px;
+}
+
+/* <div class="cart" id="cart">
+        <i class='bx bx-x cart__close' id="cart-close"></i>
+
+        <h2 class="cart__title-center">My Cart</h2>
+
+        <div class="cart__container"></div>
+
+        <div class="cart__prices">
+        <span class="cart__prices-item"><span id="items-count"></span> items</span>
+        <span class="cart__prices-total" id="cart-total"></span>
+        </div>
+
+        <div class="cart__checkout">
+        <button class="button cart__btn" id="cart-checkout" disabled><i class='bx bxs-check-shield'></i> Checkout</button>
+        </div>
+
+</div> */
