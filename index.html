@@ -14,17 +14,21 @@
 </head>
 <body>
 
-    <header>
+    <div>
+        <img src="./images/favicon.png" alt="Academlo logo">
+    </div>
+
+    <header id="header">
         <nav class="nav-container">
             <a class="nav-logo" href="#">
                 <img src="./images/favicon.png" alt="Academlo logo">STORE
             </a>
             <ul class="nav-list">
                 <li>
-                    <a href="#">Home</a>
+                    <a id="nav-a1" class="nav-a-select" href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Products</a>
+                    <a id="nav-a2" href="#section-products">Products</a>
                 </li>
             </ul>
             <div class="nav-icons">
@@ -70,8 +74,8 @@
                     <span>4 products</span>
                 </li>
             </ul>
-            <div class="cards-container">
-                <div class="product-card">
+            <div id="cards-container">
+                <!-- <div class="product-card">
                     <img src="./images/featured1.png" alt="Hoodies">
                     <div>
                         <h3>$14.00</h3>
@@ -79,7 +83,7 @@
                     </div>
                     <h4>Hoodies</h4>
                     <button class="card-boton">+</button>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
@@ -134,6 +138,7 @@
             <span>© ACADEMLO. All rigths reserved</span>
         </section>
     </footer>
-    
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
