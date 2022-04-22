@@ -26,6 +26,32 @@ const listProducts = {
 
 const listProductsHtml = document.getElementById("cards-container");
 const loader = document.querySelector("#loader");
+const bag = document.querySelector(".nav-icons .nav-icon-bag");
+const cart = document.querySelector(".cart");
+const closeCartButton = document.querySelector("#cart-close");
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    setTimeout(() => {
+        loader.classList.toggle("display-none")
+    }, 3000)
+    showProducts();
+    headerScroll();
+    navScroll();
+    cartClicked();
+    cartClosed();
+})
+
+function cartClicked() {
+    bag.addEventListener('click', () => {
+        cart.classList.add('show-cart');
+    })
+}
+
+function cartClosed() {
+    closeCartButton.addEventListener('click', () => {
+        cart.classList.remove('show-cart');
+    })
+}
 
 function showProducts() {
     let fragmento = ``;
@@ -46,7 +72,6 @@ function showProducts() {
     })
     listProductsHtml.innerHTML = fragmento;
 }
-
 
 function headerScroll() {
     const header = document.querySelector('#header');
@@ -76,12 +101,3 @@ function navScroll() {
         }
     })
 }
-
-window.addEventListener('DOMContentLoaded', (event) => {
-    setTimeout(() => {
-        loader.classList.toggle("display-none")
-    }, 3000)
-    showProducts();
-    headerScroll();
-    navScroll();
-})
