@@ -106,7 +106,6 @@ body {
     height: 30rem;
     overflow-y: auto;
     margin-top: 2.5rem;
-    border: 1px solid #000;
 }
 
 /* Width */
@@ -224,6 +223,15 @@ body {
     position: relative;
 }
 
+#checkout-container > h3 {
+    padding-top: 1.5rem;
+    font-size: 1.4rem;
+}
+
+#checkout-container > h3.display-none {
+    display: none
+}
+
 #checkout-button {
     display: inline-flex;
     align-items: center;
@@ -323,8 +331,28 @@ header {
     cursor: pointer;
 }
 
+#counter-container {
+    position: relative;
+}
+
 .nav-icon-bag {
+    cursor: pointer;
     width: 22px !important;
+}
+
+.nav-icon-bag ~ #counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    left: 1.2rem;
+    cursor: pointer;
 }
 
 .nav-icons .display-none {

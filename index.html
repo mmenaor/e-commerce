@@ -24,27 +24,28 @@
         </div>
         <h2>My Cart</h2>
         <div id="full-cart" class="vertical-scroll">
-            <img src="./images/empty-cart.png" alt="Empty">
             <div id="empty-cart-image">
                 <img src="./images/empty-cart.png" alt="Empty cart">
             </div>
-            <!-- <div id="cart-container">
-                <img src="./images/featured1.png" alt="Hoodies">
-                <div id="cart-container-text">
-                    <h3>Sweatshirts</h3>
-                    <h4>Stock: 20 | <span>$24.00</span></h4>
-                    <span>Subtotal: $72.00</span>
-                    <div id="cart-container-buttons">
-                        <button>-</button>
-                        <h4>3 units</h4>
-                        <button>+</button>
-                        <img src="./images/bin.png" alt="Bin">
+            <div id="cart-list">
+                <!-- <div id="cart-container">
+                    <img src="./images/featured1.png" alt="Hoodies">
+                    <div id="cart-container-text">
+                        <h3>Sweatshirts</h3>
+                        <h4>Stock: 20 | <span>$24.00</span></h4>
+                        <span>Subtotal: $72.00</span>
+                        <div id="cart-container-buttons">
+                            <button>-</button>
+                            <h4>3 units</h4>
+                            <button>+</button>
+                            <img src="./images/bin.png" alt="Bin">
+                        </div>
                     </div>
-                </div>
-            </div> -->
+                </div> -->
+            </div>
         </div>
         <div id="checkout-container">
-            <h3>TOTAL: </h3>
+            <h3></h3>
             <button id="checkout-button">Checkout</button>
         </div>
     </div>
@@ -65,7 +66,10 @@
             <div class="nav-icons">
                 <img src="./images/moon.png" alt="Dark theme">
                 <img class="display-none" src="./images/sun.png" alt="Light theme">
-                <img class="nav-icon-bag" src="./images/shopping-bag.png" alt="Bag icon">
+                <div id="counter-container">
+                    <img class="nav-icon-bag" src="./images/shopping-bag.png" alt="Bag icon">
+                    <span id="counter">6</span>
+                </div>
                 <img class="app-icon display-none" src="./images/apps.png" alt="Apps icon">
             </div>
         </nav>
