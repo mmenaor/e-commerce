@@ -23,22 +23,29 @@
             <span id="cart-close">x</span>
         </div>
         <h2>My Cart</h2>
-        <div id="cart-container">
-            <img src="./images/featured1.png" alt="Hoodies">
-            <div id="cart-container-text">
-                <h3>Sweatshirts</h3>
-                <h4>Stock: 20 | <span>$24.00</span></h4>
-                <span>Subtotal: $72.00</span>
-                <div id="cart-container-buttons">
-                    <button>-</button>
-                    <h4>3 units</h4>
-                    <button>+</button>
-                    <img src="./images/bin.png" alt="Bin">
-                </div>
+        <div id="full-cart" class="vertical-scroll">
+            <img src="./images/empty-cart.png" alt="Empty">
+            <div id="empty-cart-image">
+                <img src="./images/empty-cart.png" alt="Empty cart">
             </div>
+            <!-- <div id="cart-container">
+                <img src="./images/featured1.png" alt="Hoodies">
+                <div id="cart-container-text">
+                    <h3>Sweatshirts</h3>
+                    <h4>Stock: 20 | <span>$24.00</span></h4>
+                    <span>Subtotal: $72.00</span>
+                    <div id="cart-container-buttons">
+                        <button>-</button>
+                        <h4>3 units</h4>
+                        <button>+</button>
+                        <img src="./images/bin.png" alt="Bin">
+                    </div>
+                </div>
+            </div> -->
         </div>
         <div id="checkout-container">
-          <button id="checkout-button">Checkout</button>
+            <h3>TOTAL: </h3>
+            <button id="checkout-button">Checkout</button>
         </div>
     </div>
 
@@ -82,21 +89,21 @@
         </section>
         <section id="section-products">
             <ul class="product-list">
-                <li>
-                    <h3>Show All</h3>
-                    <span>show all products</span>
+                <li product-type="All">
+                    <h3 product-type="All">Show All</h3>
+                    <span product-type="All">show all products</span>
                 </li>
-                <li>
-                    <h3>Hoodies</h3>
-                    <span>3 products</span>
+                <li product-type="Hoodies">
+                    <h3 product-type="Hoodies">Hoodies</h3>
+                    <span product-type="Hoodies">3 products</span>
                 </li>
-                <li>
-                    <h3>Shirts</h3>
-                    <span>4 products</span>
+                <li product-type="Shirts">
+                    <h3 product-type="Shirts">Shirts</h3>
+                    <span product-type="Shirts">4 products</span>
                 </li>
-                <li>
-                    <h3>Sweatshirts</h3>
-                    <span>4 products</span>
+                <li product-type="Sweatshirts">
+                    <h3 product-type="Sweatshirts">Sweatshirts</h3>
+                    <span product-type="Sweatshirts">4 products</span>
                 </li>
             </ul>
             <div id="cards-container">

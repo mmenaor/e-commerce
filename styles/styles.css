@@ -50,12 +50,12 @@ body {
 /* -------------------- CART -------------------- */
 /* -------------------- CART -------------------- */
 .cart {
-    width: 40vw;
+    width: 50vw;
     height: 100vh;
     background-color: #ffffff;
     position: fixed;
     top: 0;
-    right: -40vw;
+    right: -50vw;
     padding: 2rem;
     z-index: 20;
     box-shadow: 0 4px 12px hsl(206deg 4% 4% / 20%);
@@ -85,6 +85,51 @@ body {
     font-weight: 500;
     padding-top: 1rem;
 }
+
+#empty-cart-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+}
+
+#empty-cart-image > img {
+    width: 250px;
+}
+
+#empty-cart-image.display-none {
+    display: none;
+}
+
+.cart .vertical-scroll {
+    width: 100%;
+    height: 30rem;
+    overflow-y: auto;
+    margin-top: 2.5rem;
+    border: 1px solid #000;
+}
+
+/* Width */
+.cart .vertical-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+.cart .vertical-scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #d1ceca67; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+.cart .vertical-scroll::-webkit-scrollbar-thumb {
+    background: #e9495979;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+.cart .vertical-scroll::-webkit-scrollbar-thumb:hover {
+    background: #e94959;
+  }
 
 #cart-container {
     display: flex;
@@ -193,7 +238,15 @@ body {
     cursor: pointer;
     transition: all 0.4s ease;
     position: absolute;
-    top: 200px;
+    top: 50px;
+}
+
+#checkout-button:hover {
+    background: #e94959;
+}
+
+#checkout-button.display-none {
+    display: none;
 }
 
 /* -------------------- NAV -------------------- */
@@ -516,6 +569,10 @@ header {
     transition: all 0.3s ease;
 }
 
+#cards-container > div.display-none {
+    display: none;
+}
+
 /* -------------------- FOOTER -------------------- */
 /* -------------------- FOOTER -------------------- */
 #section-footer {
@@ -630,6 +687,15 @@ header {
         display: inline;
     }
 
+    .cart {
+        width: 100vw;
+        right: -100vw;
+    }
+
+    .show-cart {
+        right: 0vw;
+    }
+
     #section-home {
         margin-bottom: 0;
     }
@@ -644,7 +710,3 @@ header {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-/* @media only screen and (max-width:580) {
-
-} */
